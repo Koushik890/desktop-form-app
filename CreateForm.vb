@@ -16,15 +16,15 @@ Public Class CreateForm
 
     Private Sub CreateForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Set form title and size
-        Me.Text = "John Doe, Slidely Task 2 - Create Submission"
+        Me.Text = "Slidely Task 2 - Create Submission"
         Me.Size = New Size(500, 450)
 
         ' Label for the form title
         Dim lblTitle As New Label()
-        lblTitle.Text = "John Doe, Slidely Task 2 - Create Submission"
+        lblTitle.Text = "Slidely Task 2 - Create Submission"
         lblTitle.Font = New Font("Arial", 12, FontStyle.Bold)
         lblTitle.AutoSize = True
-        lblTitle.Location = New Point(40, 20)
+        lblTitle.Location = New Point(70, 20)
         Me.Controls.Add(lblTitle)
 
         ' Name label and textbox

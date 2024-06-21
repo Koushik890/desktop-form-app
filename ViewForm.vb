@@ -16,18 +16,19 @@ Public Class ViewForm
     Private txtStopwatch As TextBox
     Private ReadOnly httpClient As New HttpClient()
     Private isEditMode As Boolean = False
+    Private lblTitle As Label
 
     Private Sub ViewForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Set form title and size
-        Me.Text = "John Doe, Slidely Task 2 - View Submissions"
+        Me.Text = "Slidely Task 2 - View Submissions"
         Me.Size = New Size(500, 500)
 
         ' Label for the form title
-        Dim lblTitle As New Label()
-        lblTitle.Text = "John Doe, Slidely Task 2 - View Submissions"
-        lblTitle.Font = New Font("Arial", 12, FontStyle.Bold)
+        lblTitle = New Label()
+        lblTitle.Text = "Slidely Task 2 - View Submissions"
+        lblTitle.Font = New Font("Arial", 10.5, FontStyle.Bold)
         lblTitle.AutoSize = True
-        lblTitle.Location = New Point(40, 20)
+        lblTitle.Location = New Point(5, 20)
         Me.Controls.Add(lblTitle)
 
         ' Name label and textbox
@@ -100,6 +101,7 @@ Public Class ViewForm
                 txtGithub.Text = submission.github_link
                 txtStopwatch.Text = submission.stopwatch_time
                 ToggleFields(False)
+                UpdateTitle(submission.name)
             Else
                 MessageBox.Show("No more submissions to display.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 currentIndex -= 1 ' Revert the index increment
@@ -233,6 +235,10 @@ Public Class ViewForm
             txtGithub.BackColor = Color.LightGray
             txtStopwatch.BackColor = Color.LightGray
         End If
+    End Sub
+
+    Private Sub UpdateTitle(name As String)
+        lblTitle.Text = $"{name}, Slidely Task 2 - View Submissions"
     End Sub
 End Class
 

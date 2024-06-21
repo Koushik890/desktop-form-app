@@ -4,15 +4,15 @@
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Set form title and size
-        Me.Text = "John Doe, Slidely Task 2 - Slidely Form App"
+        Me.Text = "Slidely Task 2 - Slidely Form App"
         Me.Size = New Size(500, 300)
 
         ' Add label for the form title
         Dim lblTitle As New Label()
-        lblTitle.Text = "John Doe, Slidely Task 2 - Slidely Form App"
+        lblTitle.Text = "Slidely Task 2 - Slidely Form App"
         lblTitle.Font = New Font("Arial", 12, FontStyle.Bold)
         lblTitle.AutoSize = True
-        lblTitle.Location = New Point(40, 30)
+        lblTitle.Location = New Point(85, 30)
         Me.Controls.Add(lblTitle)
 
         ' View Submissions button
