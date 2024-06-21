@@ -16,7 +16,6 @@ This project consists of a Windows desktop application and a backend server for 
     - [Usage](#usage-1)
 3. [Screenshots](#screenshots)
 4. [Contribution](#contribution)
-5. [License](#license)
 
 ## Desktop Application
 
