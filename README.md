@@ -112,7 +112,7 @@ This project consists of a Windows desktop application and a backend server for 
     node dist/server.js
     ```
 
-2. The server will be running on `http://localhost:3000`.
+2. The server will be running on `http://localhost:3000`, bound to IPv4 loopback (`127.0.0.1`) so other computers cannot access submission data. This backend is for local desktop use; local processes still have access.
 
 3. API Endpoints:
     - `GET /ping`: Returns `true`.

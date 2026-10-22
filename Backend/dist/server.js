@@ -10,6 +10,6 @@ const app = (0, express_1.default)();
 const port = 3000;
 app.use(body_parser_1.default.json());
 app.use(routes_1.default);
-app.listen(port, () => {
+app.listen(port, '127.0.0.1', () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
