@@ -8,6 +8,6 @@ const port = 3000;
 app.use(bodyParser.json());
 app.use(routes);
 
-app.listen(port, () => {
+app.listen(port, '127.0.0.1', () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
